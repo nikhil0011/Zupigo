@@ -1,0 +1,833 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F6F6F6"
+    android:orientation="vertical"
+    android:weightSum="100">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="85">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/appbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="#f6650a"
+                    android:gravity="center_vertical"
+                    android:weightSum="100">
+
+                    <LinearLayout
+                        android:id="@+id/mnu1"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="13"
+                        android:background="#f6650a">
+
+                        <ImageView
+                            android:id="@+id/imageView2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:background="#f6650a"
+                            android:src="@mipmap/ic_launcher_back" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/searc"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="70">
+
+                        <TextView
+                            android:id="@+id/textView2"
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:paddingLeft="100dp"
+                            android:text="Zupigo"
+                            android:textColor="#fff"
+                            android:textSize="24dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/mnu11"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="15"
+                        android:background="#f6650a">
+
+                        <ImageView
+                            android:id="@+id/share"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:background="#f6650a"
+                            android:src="@mipmap/ic_launcher_share" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/image"
+                    android:layout_width="match_parent"
+                    android:layout_height="275dp"
+                    android:layout_below="@+id/appbar"
+                    android:orientation="vertical">
+
+
+                    <com.android.volley.toolbox.NetworkImageView
+                        android:id="@+id/imageViewHero"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#fff"
+                        android:padding="20dp" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginTop="10dp"
+
+                        android:background="#DBDBDB">
+
+                        <TextView
+                            android:id="@+id/textViewPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+
+                            android:padding="12dp"
+                            android:text="Hello"
+                            android:textColor="#F2955A"
+                            android:textSize="20dp"
+                            />
+
+                        <TextView
+
+                            android:text="Hello"
+                            android:id="@+id/textViewlistedPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/textViewPrice"
+
+                            android:paddingRight="19dp"
+                            android:paddingTop="19dp"
+                            android:paddingBottom="19dp"
+                            android:paddingLeft="10dp"
+
+                            android:textColor="#000"
+                            android:textSize="10dp" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/longtitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/image"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="20dp"
+                    >
+
+                    <TextView
+                        android:id="@+id/textViewName"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="hellllo" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/chart"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="300dp"
+                    android:layout_below="@+id/longtitle"
+                    android:layout_marginTop="20dp"
+                    android:textColor="#000"
+                    tools:ignore="Orientation" />
+
+
+                <RelativeLayout
+                    android:id="@+id/tablelayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/chart"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="15dp"
+                    android:textColor="#000">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="Price History    "
+                        android:textSize="15dp" />
+
+                    <TableLayout
+                        android:background="#F5F5F5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="30dp"
+                        android:stretchColumns="1,2,2">
+
+                        <TableRow
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:layout_margin="1dp"
+                            android:background="#E4E4E4"
+                            android:minHeight="60px"
+                            android:paddingTop="5dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+
+                                android:gravity="left"
+                                android:paddingLeft="15dp"
+                                android:paddingRight="15dp"
+                                android:text="Type"
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:paddingLeft="90dp"
+                                android:text="Price"
+                              />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:paddingLeft="83dp"
+                                android:text="Date"
+                              />
+                        </TableRow>
+
+                        <TableRow
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:layout_margin="1dp"
+                            android:background="#fff"
+                            android:minHeight="60px"
+                            android:paddingTop="5dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:paddingLeft="15dp"
+                                android:paddingRight="15dp"
+                                android:text="Current"
+                                />
+
+                            <TextView
+
+                                android:id="@+id/currentprice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:paddingLeft="90dp"
+
+                                android:text="Rs.290"
+                                />
+
+                            <TextView
+                                android:id="@+id/tabletextcurrentdate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:paddingLeft="40dp"
+                                android:text="22-09-2015"
+                                />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:layout_margin="1dp"
+                            android:background="#fff"
+                            android:minHeight="60px"
+                            android:paddingTop="5dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:paddingLeft="15dp"
+                                android:paddingRight="15dp"
+                                android:text="Highest"
+                                />
+
+                            <TextView
+                                android:id="@+id/tabletexthighestprice"
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:paddingLeft="90dp"
+                                android:text="Rs.290"
+                                />
+
+                            <TextView
+                                android:id="@+id/tabletextmaxmdate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:paddingLeft="40dp"
+                                android:text="22-09-2015"
+                                />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:layout_margin="1dp"
+                            android:background="#fff"
+                            android:minHeight="60px"
+                            android:paddingTop="5dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:paddingLeft="15dp"
+                                android:paddingRight="15dp"
+                                android:text="Lowest"
+                                />
+
+                            <TextView
+
+                                android:id="@+id/tabletextlowestprice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:paddingLeft="90dp"
+                                android:text="Rs.290"
+                                />
+
+                            <TextView
+
+                                android:id="@+id/tabletextminmdate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:paddingLeft="40dp"
+                                android:text="22-09-2015"
+                                />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:layout_margin="1dp"
+                            android:background="#fff"
+                            android:minHeight="60px"
+                            android:paddingTop="5dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:paddingLeft="15dp"
+                                android:paddingRight="15dp"
+                                android:text="Average"
+                                />
+
+                            <TextView
+
+                                android:id="@+id/tabletextaverageprice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:paddingLeft="90dp"
+                                android:text="Rs.290"
+                                />
+
+                            <TextView
+
+                                android:id="@+id/tabletextaveragedate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:paddingLeft="20dp"
+                                android:text="-"
+                                />
+                        </TableRow>
+                    </TableLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/tablelast5layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tablelayout"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="Last 5 price changes"
+                        android:textSize="15dp" />
+
+                    <TableLayout
+                        android:background="#F5F5F5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="30dp">
+
+                        <TableRow
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:background="#E4E4E4"
+                            android:minHeight="60px"
+                            android:paddingTop="5dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:paddingLeft="20dp"
+
+                                android:text="Date"
+                                />
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:paddingLeft="11dp"
+                                android:text="Price"
+                                />
+
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:layout_margin="1dp"
+                            android:background="#fff"
+                            android:minHeight="60px"
+                            android:paddingTop="5dp">
+
+                            <TextView
+                                android:id="@+id/tabletextdate1"
+                                android:layout_width="150dp"
+                                android:layout_height="match_parent"
+                                android:paddingLeft="20dp"
+                                android:text="22-09-2015"
+                                />
+
+                            <TextView
+                                android:id="@+id/tableprice1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:paddingLeft="20dp"
+                                android:text="Rs.290"
+                                />
+
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:layout_margin="1dp"
+                            android:background="#fff"
+                            android:minHeight="60px"
+                            android:paddingTop="5dp">
+
+                            <TextView
+                                android:id="@+id/tabletextdate2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:paddingLeft="20dp"
+                                android:text="22-09-2015"
+                                />
+
+                            <TextView
+                                android:id="@+id/tableprice2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:paddingLeft="20dp"
+                                android:text="Rs.290"
+                                />
+
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:layout_margin="1dp"
+                            android:background="#fff"
+                            android:minHeight="60px"
+                            android:paddingTop="5dp">
+
+                            <TextView
+
+                                android:id="@+id/tabletextdate3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:paddingLeft="20dp"
+
+                                android:text="22-09-2015"
+                                />
+
+                            <TextView
+
+                                android:id="@+id/tableprice3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:paddingLeft="20dp"
+                                android:text="Rs.290"
+                                />
+                        </TableRow>
+
+
+                        <TableRow
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:layout_margin="1dp"
+                            android:background="#fff"
+                            android:minHeight="60px"
+                            android:paddingTop="5dp">
+
+                            <TextView
+
+                                android:id="@+id/tabletextdate4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:paddingLeft="20dp"
+                                android:text="22-09-2015"
+                                />
+
+                            <TextView
+
+                                android:id="@+id/tableprice4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+
+                                android:paddingLeft="20dp"
+                                android:text="Rs.290"
+                                />
+
+                        </TableRow>
+
+
+                    </TableLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/longcontent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tablelast5layout"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="20dp">
+
+
+                    <TextView
+                        android:id="@+id/textViewContent"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/specs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/longcontent"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="20dp">
+
+                    <TableLayout
+                        android:background="#F5F5F5"
+                        android:id="@+id/fkproductdetails"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:stretchColumns="1,2"
+                        android:textColor="#000">
+
+                        <TableRow
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:layout_margin="1dp"
+                            android:background="#E4E4E4"
+                            android:minHeight="60px"
+                            android:paddingTop="5dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:paddingLeft="20dp"
+                                android:text="Specification   "
+                                />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:layout_margin="1dp"
+                            android:background="#fff"
+                            android:minHeight="60px"
+                            android:paddingTop="5dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:paddingLeft="20dp"
+                                android:text="Cat Name"
+                                />
+
+                            <TextView
+                                android:id="@+id/textViewCatName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="28dp"
+                                android:text="moto x play"
+                                />
+
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:layout_margin="1dp"
+                            android:background="#fff"
+                            android:minHeight="60px"
+                            android:paddingTop="5dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:paddingLeft="20dp"
+                                android:text="PID"
+                                />
+
+                            <TextView
+                                android:id="@+id/textViewPID"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="28dp"
+                                android:text="moto x play"
+                                />
+
+                        </TableRow>
+                    </TableLayout>
+
+                    <TableLayout
+                        android:id="@+id/amazonproduct"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:layout_below="@+id/fkproductdetails"
+                        android:stretchColumns="1,2"
+                        android:textColor="#000">
+
+                        <TableRow
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:layout_margin="1dp"
+                            android:background="#fff"
+                            android:minHeight="60px"
+                            android:paddingTop="5dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:paddingLeft="20dp"
+                                android:text="Binding"
+                                />
+
+                            <TextView
+                                android:id="@+id/textViewBinding"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="38dp"
+                                android:text="moto x play"
+                                />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:layout_margin="1dp"
+                            android:background="#fff"
+                            android:minHeight="60px"
+                            android:paddingTop="5dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:paddingLeft="20dp"
+                                android:text="Dimensions"
+                                />
+
+                            <TextView
+                                android:id="@+id/textViewPackageDimensions"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="38dp"
+                                android:text="moto x play"
+                                />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:layout_margin="1dp"
+                            android:background="#fff"
+                            android:minHeight="60px"
+                            android:paddingTop="5dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:paddingLeft="20dp"
+                                android:text="Part Number"
+                                />
+
+                            <TextView
+                                android:id="@+id/textViewPartNumber"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="38dp"
+                                android:text="moto x play"
+                                />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:layout_margin="1dp"
+                            android:background="#fff"
+                            android:minHeight="60px"
+                            android:paddingTop="5dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:paddingLeft="20dp"
+                                android:text="ItemWeight"
+                                />
+
+                            <TextView
+                                android:id="@+id/textViewItemWeight"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="38dp"
+                                android:text="moto x play"
+                                />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:layout_margin="1dp"
+                            android:background="#fff"
+                            android:minHeight="60px"
+                            android:paddingTop="5dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:paddingLeft="20dp"
+                                android:text="Brand"
+                                />
+
+                            <TextView
+                                android:id="@+id/textViewBrand"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="38dp"
+                                android:text="moto x play"
+                                />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:layout_margin="1dp"
+                            android:background="#fff"
+                            android:minHeight="60px"
+                            android:paddingTop="5dp">
+
+                            <TextView
+                                android:id="@+id/avialtext"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:paddingLeft="20dp"
+                                android:text="Availability"
+                                />
+
+                            <TextView
+                                android:id="@+id/textViewAvailability"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="38dp"
+                                android:text="moto x play"
+                                />
+                        </TableRow>
+                    </TableLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_weight="15"
+        android:background="#fff"
+        android:clickable="true"
+        android:padding="10dp">
+
+        <Button
+            android:id="@+id/tracknowbutton"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentLeft="true"
+            android:layout_gravity="center"
+
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/shape"
+            android:text="Start Tracking"
+            android:textColor="#F96400" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="#f6650a"
+            android:text="Buynow"
+            android:textColor="#fff" />
+    </LinearLayout>
+</LinearLayout>
